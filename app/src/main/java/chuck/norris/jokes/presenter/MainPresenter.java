@@ -57,13 +57,28 @@ public class MainPresenter
         publish();
     }
 
+    private void resetData()
+    {
+        items = null;
+        error = null;
+    }
+
     public void onFabClick()
     {
         if (view != null) {
+            // reset data
+            resetData();
+
+            // get data
+            requestData();
+
+            // add new content
+            publish();
+
+            // show message
             this.view.showSnackMessage(
                     String.format(view.getString(R.string.fab_message), DEFAULT_NAME)
             );
-            requestData();
         }
     }
 
@@ -82,6 +97,8 @@ public class MainPresenter
             } else if (error != null) {
                 view.onItemsError(error);
             }
+
+            // TODO add loading screen
         }
     }
 }
