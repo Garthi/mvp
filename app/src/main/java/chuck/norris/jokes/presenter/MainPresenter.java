@@ -61,6 +61,9 @@ public class MainPresenter
     {
         items = null;
         error = null;
+        if (this.view != null) {
+            this.view.clearList();
+        }
     }
 
     public void onFabClick()
@@ -94,11 +97,12 @@ public class MainPresenter
         if (view != null) {
             if (items != null) {
                 view.onItemsNext(items);
+                this.view.stopWaitAnimation();
             } else if (error != null) {
                 view.onItemsError(error);
+            } else {
+                this.view.startWaitAnimation();
             }
-
-            // TODO add loading screen
         }
     }
 }

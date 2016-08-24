@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ProgressBar;
 
 import chuck.norris.jokes.R;
 import chuck.norris.jokes.model.response.joke.Item;
@@ -101,8 +102,13 @@ public class MainActivity extends AppCompatActivity
 
     public void onItemsNext(Item[] items)
     {
-        adapter.clear();
+        clearList();
         adapter.addAll(items);
+    }
+
+    public void clearList()
+    {
+        adapter.clear();
     }
 
     public void onItemsError(Throwable throwable)
@@ -114,5 +120,17 @@ public class MainActivity extends AppCompatActivity
     {
         Snackbar.make(mLayout, text, Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show();
+    }
+
+    public void startWaitAnimation()
+    {
+        ProgressBar bar = (ProgressBar)findViewById(R.id.progressBar);
+        bar.setVisibility(ProgressBar.VISIBLE);
+    }
+
+    public void stopWaitAnimation()
+    {
+        ProgressBar bar = (ProgressBar)findViewById(R.id.progressBar);
+        bar.setVisibility(ProgressBar.GONE);
     }
 }
