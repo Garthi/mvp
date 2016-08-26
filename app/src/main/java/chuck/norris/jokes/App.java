@@ -3,7 +3,7 @@ package chuck.norris.jokes;
 import android.app.Application;
 import android.util.Log;
 
-import chuck.norris.jokes.model.JokeAPI;
+import chuck.norris.jokes.api.JokeAPI;
 import retrofit.RestAdapter;
 
 public class App extends Application

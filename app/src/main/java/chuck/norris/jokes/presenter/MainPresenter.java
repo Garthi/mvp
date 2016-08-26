@@ -6,8 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 import chuck.norris.jokes.App;
 import chuck.norris.jokes.R;
-import chuck.norris.jokes.model.response.*;
-import chuck.norris.jokes.model.response.joke.Item;
+import chuck.norris.jokes.model.JokeResponse;
+import chuck.norris.jokes.model.joke.Item;
 import chuck.norris.jokes.view.MainActivity;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;

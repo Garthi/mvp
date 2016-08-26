@@ -1,4 +1,4 @@
-package chuck.norris.jokes.model.response.joke;
+package chuck.norris.jokes.model.joke;
 
 import android.text.Html;
 

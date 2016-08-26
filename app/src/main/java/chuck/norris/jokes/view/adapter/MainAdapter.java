@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import chuck.norris.jokes.R;
-import chuck.norris.jokes.model.response.joke.Item;
+import chuck.norris.jokes.model.joke.Item;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainHolder>
 {

@@ -1,6 +1,6 @@
-package chuck.norris.jokes.model;
+package chuck.norris.jokes.api;
 
-import chuck.norris.jokes.model.response.JokeResponse;
+import chuck.norris.jokes.model.JokeResponse;
 import retrofit.http.GET;
 import retrofit.http.Query;
 import rx.Observable;

@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 
 import chuck.norris.jokes.R;
-import chuck.norris.jokes.model.response.joke.Item;
+import chuck.norris.jokes.model.joke.Item;
 import chuck.norris.jokes.presenter.MainPresenter;
 import chuck.norris.jokes.view.adapter.MainAdapter;
 
